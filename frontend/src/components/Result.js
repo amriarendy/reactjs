@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Badge, Col, Collapse, Row } from "react-bootstrap";
+import { Badge, Col, Row } from "react-bootstrap";
 import { ListGroup } from "react-bootstrap";
 import { numberWithCommas } from "../utils/utils";
+import Total from "./Total";
 
 export default class Result extends Component {
   render() {
@@ -14,7 +15,7 @@ export default class Result extends Component {
           {carts.length !== 0 && (
             <ListGroup variant="flush">
               {carts.map((cartMenus) => (
-                <ListGroup.Item>
+                <ListGroup.Item key={cartMenus.id}>
                   <Row>
                     <Col xs={2}>
                       <h4>
@@ -37,6 +38,7 @@ export default class Result extends Component {
               ))}
             </ListGroup>
           )}
+          <Total carts={carts} {...this.props} />
         </h4>
       </Col>
     );

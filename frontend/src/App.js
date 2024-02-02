@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { NavbarComponents } from "./components";
 import { Home, Success } from "./pages";
 
@@ -9,10 +9,10 @@ export default class App extends Component {
       <BrowserRouter>
         <NavbarComponents />
         <main>
-          <Routes>
+          <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/success" component={Success} exact />
-          </Routes>
+          </Switch>
         </main>
       </BrowserRouter>
     );
