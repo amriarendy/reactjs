@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const location = useLocation();
   const { pathname } = location;
+
+  const trigger = useRef;
 };
 
 export default function Sidebar() {
