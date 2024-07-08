@@ -1,0 +1,15 @@
+.top-bar {
+  margin-left: fixed;
+  transition: margin-left 0.4s ease;
+}
+
+.sidebar:hover + .top-bar {
+  margin-left: 260px; /* Width of the expanded sidebar */
+}
+
+.header {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #161a2d;
+}
