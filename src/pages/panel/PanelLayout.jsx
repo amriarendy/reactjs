@@ -1,0 +1,24 @@
+import React from "react";
+import Header from "../../components/header/Header";
+import Sidebar from "../../components/sidebar/Sidebar";
+
+const PanelLayout = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <Sidebar />
+      <div className="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+        <div
+          id="main-content"
+          className="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900"
+        >
+          <main>
+            <div>{children}</div>
+          </main>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default PanelLayout;
