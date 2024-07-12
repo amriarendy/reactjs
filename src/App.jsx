@@ -4,6 +4,7 @@ import PanelLayout from "./pages/panel/PanelLayout";
 import Blog from "./pages/panel/Blog";
 import Setting from "./pages/panel/Setting";
 import Profile from "./pages/panel/Profile";
+import Blank from "./pages/panel/Blank";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/setting" element={<Setting />} />
+          <Route path="/blank" element={<Blank />} />
         </Routes>
       </BrowserRouter>
     </>

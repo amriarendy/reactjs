@@ -12,7 +12,7 @@ const AttributeTable = () => {
           <div className="sm:flex">
             <div className="items-center hidden mb-3 sm:flex sm:divide-x sm:divide-gray-100 sm:mb-0 dark:divide-gray-700">
               <form className="lg:pr-3" action="#" method="GET">
-                <label for="users-search" className="sr-only">
+                <label htmlFor="users-search" className="sr-only">
                   Search
                 </label>
                 <div className="relative mt-1 lg:w-64 xl:w-96">
@@ -41,13 +41,16 @@ const AttributeTable = () => {
                 href="#"
                 className="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
               >
-                <FaFileDownload className="w-5 h-5 mr-2 -ml-1" fill='currentColor' />
+                <FaFileDownload
+                  className="w-5 h-5 mr-2 -ml-1"
+                  fill="currentColor"
+                />
                 Export
               </a>
             </div>
           </div>
-          </div>
-          </div>
+        </div>
+      </div>
     </>
   );
 };
