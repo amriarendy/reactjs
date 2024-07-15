@@ -1,14 +1,17 @@
 import React from "react";
 
 const Button = ({ item }) => {
+  const iconClassName = `className="w-5 h-5 mr-2 -ml-1"`;
+  const iconFill = `fill="currentColor"`;
   return (
     <>
       <button
-        type="button"
-        data-modal-target="add-user-modal"
-        data-modal-toggle="add-user-modal"
-        className="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+        type={item.type}
+        data-modal-target={item.modalTarget}
+        data-modal-toggle={item.modalToggle}
+        className={`inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-${color}-700 hover:bg-${color}-800 focus:ring-4 focus:ring-${color}-300 sm:w-auto dark:bg-${color}-600 dark:hover:bg-${color}-700 dark:focus:ring-${color}-800`}
       >
+        {item.icon}
         <svg
           className="w-5 h-5 mr-2 -ml-1"
           fill="currentColor"

@@ -1,7 +1,7 @@
 import React from "react";
 import PanelLayout from "./PanelLayout";
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
-import { GridHorizontal, GridVertical } from "../../components/grid/Grid";
+import { ColsVertical, GridHorizontal, GridVertical } from "../../components/grid/Grid";
 import { CardHorizontal, CardVertical } from "../../components/card/Card";
 
 const Blank = () => {
@@ -9,19 +9,20 @@ const Blank = () => {
     <>
       <PanelLayout>
         <Breadcrumbs />
-        <GridHorizontal>
+        <GridHorizontal item={{ cols: 5 }}>
+          <CardHorizontal />
+          <CardHorizontal />
           <CardHorizontal />
           <CardHorizontal />
         </GridHorizontal>
 
-        <GridHorizontal>
-          <CardHorizontal />
-          <CardHorizontal />
-        </GridHorizontal>
-
-        <GridVertical>
-          <CardVertical />
-          <CardVertical />
+        <GridVertical item={{ cols: 4 }}>
+          <ColsVertical item={{ cols: 1 }}>
+            <CardVertical />
+          </ColsVertical>
+          <ColsVertical item={{ cols: 1 }}>
+            <CardVertical />
+          </ColsVertical>
         </GridVertical>
       </PanelLayout>
     </>
