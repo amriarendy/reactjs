@@ -1,4 +1,7 @@
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
+import Input from "../../components/ui/Input";
+import Option from "../../components/ui/Option";
+import TextArea from "../../components/ui/TextArea";
 import PanelLayout from "./PanelLayout";
 
 const Setting = () => {
@@ -168,195 +171,88 @@ const Setting = () => {
               <form action="#">
                 <div className="grid grid-cols-6 gap-6">
                   <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="first-name"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      name="first-name"
-                      id="first-name"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Bonnie"
-                      required
+                    <Input
+                      item={{
+                        id: "title",
+                        name: "title",
+                        label: "Title",
+                        type: "text",
+                        required: true,
+                      }}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="last-name"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Green"
-                      required
+                    <Input
+                      item={{
+                        id: "keyword",
+                        name: "keyword",
+                        label: "Keyword",
+                        type: "text",
+                        required: true,
+                      }}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="country"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Country
-                    </label>
-                    <input
-                      type="text"
-                      name="country"
-                      id="country"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="United States"
-                      required
+                    <TextArea
+                      item={{
+                        id: "description",
+                        name: "description",
+                        label: "Description",
+                        rows: 4,
+                        required: true,
+                      }}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="city"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      City
-                    </label>
-                    <input
-                      type="text"
-                      name="city"
-                      id="city"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="e.g. San Francisco"
-                      required
+                    <Input
+                      item={{
+                        id: "author",
+                        name: "author",
+                        label: "Author",
+                        type: "text",
+                        required: true,
+                      }}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="address"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Address
-                    </label>
-                    <input
-                      type="text"
-                      name="address"
-                      id="address"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="e.g. California"
-                      required
+                    <Input
+                      item={{
+                        id: "copyright",
+                        name: "copyright",
+                        label: "Copyright",
+                        type: "text",
+                        required: true,
+                      }}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="email"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="example@company.com"
-                      required
+                    <Option
+                      item={{
+                        id: "robots",
+                        name: "robots",
+                        label: "Robots",
+                        required: true,
+                      }}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="phone-number"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Phone Number
-                    </label>
-                    <input
-                      type="number"
-                      name="phone-number"
-                      id="phone-number"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="e.g. +(12)3456 789"
-                      required
+                    <Option
+                      item={{
+                        id: "googlebot",
+                        name: "googlebot",
+                        label: "Google Bot",
+                        required: true,
+                      }}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="birthday"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Birthday
-                    </label>
-                    <input
-                      type="number"
-                      name="birthday"
-                      id="birthday"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="15/08/1990"
-                      required
-                    />
-                  </div>
-                  <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="organization"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Organization
-                    </label>
-                    <input
-                      type="text"
-                      name="organization"
-                      id="organization"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Company Name"
-                      required
-                    />
-                  </div>
-                  <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="role"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Role
-                    </label>
-                    <input
-                      type="text"
-                      name="role"
-                      id="role"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="React Developer"
-                      required
-                    />
-                  </div>
-                  <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="department"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Department
-                    </label>
-                    <input
-                      type="text"
-                      name="department"
-                      id="department"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="Development"
-                      required
-                    />
-                  </div>
-                  <div className="col-span-6 sm:col-span-3">
-                    <label
-                      htmlFor="zip-code"
-                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >
-                      Zip/postal code
-                    </label>
-                    <input
-                      type="number"
-                      name="zip-code"
-                      id="zip-code"
-                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="123456"
-                      required
+                    <Option
+                      item={{
+                        id: "googlebotnews",
+                        name: "googlebotnews",
+                        label: "Google Bot News",
+                        required: true,
+                      }}
                     />
                   </div>
                   <div className="col-span-6 sm:col-full">
