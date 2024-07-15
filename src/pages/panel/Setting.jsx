@@ -1,18 +1,20 @@
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
+import { ColsVertical, GridVertical } from "../../components/grid/Grid";
+import Button from "../../components/ui/Button";
 import Input from "../../components/ui/Input";
 import Option from "../../components/ui/Option";
+import Radio from "../../components/ui/Radio";
 import TextArea from "../../components/ui/TextArea";
 import PanelLayout from "./PanelLayout";
+import { FaCogs } from "react-icons/fa";
 
 const Setting = () => {
   return (
     <>
       <PanelLayout>
         <Breadcrumbs />
-
-        <div className="grid bg-white grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
-          {/* Profile */}
-          <div className="col-span-full xl:col-auto">
+        <GridVertical item={{ cols: 3 }}>
+          <ColsVertical item={{ cols: 1 }}>
             <div className="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
               <div className="items-center sm:flex xl:block 2xl:flex sm:space-x-4 xl:space-x-0 2xl:space-x-4">
                 <img
@@ -72,17 +74,7 @@ const Setting = () => {
                         Get Themesberg news, announcements, and product updates
                       </div>
                     </div>
-                    <label
-                      htmlFor="company-news"
-                      className="relative flex items-center cursor-pointer"
-                    >
-                      <input
-                        type="checkbox"
-                        id="company-news"
-                        className="sr-only"
-                      />
-                      <span className="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"></span>
-                    </label>
+                    <Radio item={{ id: "company-news" }} />
                   </div>
 
                   <div className="flex items-center justify-between py-4">
@@ -95,17 +87,7 @@ const Setting = () => {
                         missed
                       </div>
                     </div>
-                    <label
-                      htmlFor="account-activity"
-                      className="relative flex items-center cursor-pointer"
-                    >
-                      <input
-                        type="checkbox"
-                        id="account-activity"
-                        className="sr-only"
-                      />
-                      <span className="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"></span>
-                    </label>
+                    <Radio item={{ id: "account-activity" }} />
                   </div>
 
                   <div className="flex items-center justify-between py-4">
@@ -118,13 +100,7 @@ const Setting = () => {
                         my location
                       </div>
                     </div>
-                    <label
-                      htmlFor="meetups"
-                      className="relative flex items-center cursor-pointer"
-                    >
-                      <input type="checkbox" id="meetups" className="sr-only" />
-                      <span className="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"></span>
-                    </label>
+                    <Radio item={{ id: "meetups" }} />
                   </div>
 
                   <div className="flex items-center justify-between pt-4">
@@ -136,17 +112,7 @@ const Setting = () => {
                         Get Themsberg news, announcements, and product updates
                       </div>
                     </div>
-                    <label
-                      htmlFor="new-messages"
-                      className="relative flex items-center cursor-pointer"
-                    >
-                      <input
-                        type="checkbox"
-                        id="new-messages"
-                        className="sr-only"
-                      />
-                      <span className="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"></span>
-                    </label>
+                    <Radio item={{ id: "new-messages" }} />
                   </div>
                 </div>
                 <div className="mt-6">
@@ -161,9 +127,9 @@ const Setting = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </ColsVertical>
 
-          <div className="col-span-2">
+          <ColsVertical item={{ cols: 2 }}>
             <div className="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
               <h3 className="mb-4 text-xl font-semibold dark:text-white">
                 Tag Meta
@@ -255,6 +221,15 @@ const Setting = () => {
                       }}
                     />
                   </div>
+                  <Button
+                    item={{
+                      type: "submit",
+                      icon: <FaCogs />,
+                      modal: true,
+                      label: "Save",
+                      color: "blue",
+                    }}
+                  />
                   <div className="col-span-6 sm:col-full">
                     <button
                       className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -266,8 +241,8 @@ const Setting = () => {
                 </div>
               </form>
             </div>
-          </div>
-        </div>
+          </ColsVertical>
+        </GridVertical>
       </PanelLayout>
     </>
   );

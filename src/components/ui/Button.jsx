@@ -7,9 +7,9 @@ const Button = ({ item }) => {
     <>
       <button
         type={item.type}
-        data-modal-target={item.modalTarget}
-        data-modal-toggle={item.modalToggle}
-        className={`inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-${color}-700 hover:bg-${color}-800 focus:ring-4 focus:ring-${color}-300 sm:w-auto dark:bg-${color}-600 dark:hover:bg-${color}-700 dark:focus:ring-${color}-800`}
+        data-modal-target={item.modal}
+        data-modal-toggle={item.modal}
+        className={`inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-${item.color}-700 hover:bg-${item.color}-800 focus:ring-4 focus:ring-${item.color}-300 sm:w-auto dark:bg-${item.color}-600 dark:hover:bg-${item.color}-700 dark:focus:ring-${item.color}-800`}
       >
         {item.icon}
         <svg
