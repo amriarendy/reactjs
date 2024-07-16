@@ -53,7 +53,6 @@ const Header = () => {
               </a>
             </div>
             <div className="flex items-center">
-
               {/* <!-- Notifications --> */}
               <button
                 type="button"

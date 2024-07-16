@@ -1,18 +1,19 @@
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
-import { ColsVertical, GridVertical } from "../../components/grid/Grid";
+import { FaSave, FaRegTrashAlt } from "react-icons/fa";
 import Button from "../../components/ui/Button";
 import Input from "../../components/ui/Input";
 import Option from "../../components/ui/Option";
-import Radio from "../../components/ui/Radio";
 import TextArea from "../../components/ui/TextArea";
 import PanelLayout from "./PanelLayout";
-import { FaCogs } from "react-icons/fa";
+import Radio from "../../components/ui/Radio";
+import { ColsVertical, GridVertical } from "../../components/grid/Grid";
 
 const Setting = () => {
   return (
     <>
       <PanelLayout>
         <Breadcrumbs />
+
         <GridVertical item={{ cols: 3 }}>
           <ColsVertical item={{ cols: 1 }}>
             <div className="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
@@ -30,27 +31,20 @@ const Setting = () => {
                     JPG, GIF or PNG. Max size of 800K
                   </div>
                   <div className="flex items-center space-x-4">
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >
-                      <svg
-                        className="w-4 h-4 mr-2 -ml-1"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M5.5 13a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 13H11V9.413l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13H5.5z"></path>
-                        <path d="M9 13h2v5a1 1 0 11-2 0v-5z"></path>
-                      </svg>
-                      Upload picture
-                    </button>
-                    <button
-                      type="button"
-                      className="py-2 px-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                    >
-                      Delete
-                    </button>
+                    <Button
+                      id={"btnSave"}
+                      type={"button"}
+                      label={"Save"}
+                      color={"blue"}
+                      icon={<FaSave className="w-5 h-5 mr-2 -ml-1" />}
+                    />
+                    <Button
+                      id={"btnSave"}
+                      type={"button"}
+                      label={"Delete"}
+                      color={"red"}
+                      icon={<FaRegTrashAlt className="w-5 h-5 mr-2 -ml-1" />}
+                    />
                   </div>
                 </div>
               </div>
@@ -115,16 +109,6 @@ const Setting = () => {
                     <Radio item={{ id: "new-messages" }} />
                   </div>
                 </div>
-                <div className="mt-6">
-                  <button className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                    Save all
-                  </button>
-                </div>
-              </div>
-              <div>
-                <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Save all
-                </button>
               </div>
             </div>
           </ColsVertical>
@@ -138,105 +122,81 @@ const Setting = () => {
                 <div className="grid grid-cols-6 gap-6">
                   <div className="col-span-6 sm:col-span-3">
                     <Input
-                      item={{
-                        id: "title",
-                        name: "title",
-                        label: "Title",
-                        type: "text",
-                        required: true,
-                      }}
+                      id={"title"}
+                      name={"title"}
+                      type={"text"}
+                      label={"Title"}
+                      required={false}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <Input
-                      item={{
-                        id: "keyword",
-                        name: "keyword",
-                        label: "Keyword",
-                        type: "text",
-                        required: true,
-                      }}
+                      id={"keyword"}
+                      name={"keyword"}
+                      type={"text"}
+                      label={"Keyword"}
+                      required={false}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <TextArea
-                      item={{
-                        id: "description",
-                        name: "description",
-                        label: "Description",
-                        rows: 4,
-                        required: true,
-                      }}
+                      id={"description"}
+                      name={"description"}
+                      label={"Description"}
+                      rows={4}
+                      required={true}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <Input
-                      item={{
-                        id: "author",
-                        name: "author",
-                        label: "Author",
-                        type: "text",
-                        required: true,
-                      }}
+                      id={"author"}
+                      name={"author"}
+                      type={"text"}
+                      label={"Author"}
+                      required={false}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <Input
-                      item={{
-                        id: "copyright",
-                        name: "copyright",
-                        label: "Copyright",
-                        type: "text",
-                        required: true,
-                      }}
+                      id={"copyright"}
+                      name={"copyright"}
+                      type={"text"}
+                      label={"Copyright"}
+                      required={false}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <Option
-                      item={{
-                        id: "robots",
-                        name: "robots",
-                        label: "Robots",
-                        required: true,
-                      }}
+                      id={"robots"}
+                      name={"robots"}
+                      label={"Robots"}
+                      required={true}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <Option
-                      item={{
-                        id: "googlebot",
-                        name: "googlebot",
-                        label: "Google Bot",
-                        required: true,
-                      }}
+                      id={"googlebot"}
+                      name={"googlebot"}
+                      label={"Google Bot"}
+                      required={true}
                     />
                   </div>
                   <div className="col-span-6 sm:col-span-3">
                     <Option
-                      item={{
-                        id: "googlebotnews",
-                        name: "googlebotnews",
-                        label: "Google Bot News",
-                        required: true,
-                      }}
+                      id={"googlebotnews"}
+                      name={"googlebotnews"}
+                      label={"Google Bot News"}
+                      required={true}
                     />
                   </div>
-                  <Button
-                    item={{
-                      type: "submit",
-                      icon: <FaCogs />,
-                      modal: true,
-                      label: "Save",
-                      color: "blue",
-                    }}
-                  />
                   <div className="col-span-6 sm:col-full">
-                    <button
-                      className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      type="submit"
-                    >
-                      Save all
-                    </button>
+                    <Button
+                      id={"btnSave"}
+                      type={"button"}
+                      label={"Save"}
+                      color={"blue"}
+                      icon={<FaSave className="w-5 h-5 mr-2 -ml-1" />}
+                    />
                   </div>
                 </div>
               </form>
