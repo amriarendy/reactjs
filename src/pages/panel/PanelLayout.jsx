@@ -6,13 +6,15 @@ const PanelLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <Sidebar />
       <div className="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
-        <div className="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900">
-          <main>
-            <div>{children}</div>
-          </main>
-        </div>
+        <Sidebar />
+          <div id="main-content" className="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900">
+            <main>
+              <div className="grid grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
+                <div>{children}</div>
+              </div>
+            </main>
+          </div>
       </div>
     </>
   );

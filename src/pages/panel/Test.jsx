@@ -1,11 +1,10 @@
-import React from "react";
 import PanelLayout from "./PanelLayout";
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import Card from "../../components/card/Card";
 
-const Blank = () => {
-  return (
-    <>
+const Test = () => {
+    return (
+        <>
         <PanelLayout>
             <Breadcrumbs />
             {/* <!-- Right Content --> */}
@@ -15,8 +14,8 @@ const Blank = () => {
                 </Card>
             </div>
         </PanelLayout>
-    </>
-  );
-};
+        </>
+    )
+}
 
-export default Blank;
+export default Test;

@@ -13,7 +13,7 @@ const Dashboard = () => {
           <TabsWidget />
         </div>
 
-        <div class="grid px-4 pt-6 bg-white grid-cols-1 px-4 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
+        <div className="grid px-4 pt-6 bg-white grid-cols-1 px-4 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
           <Chart />
         </div>
       </PanelLayout>

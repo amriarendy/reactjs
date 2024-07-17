@@ -663,20 +663,20 @@ if (document.getElementById("traffic-by-device")) {
 const Chart = () => {
   return (
     <>
-      <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
-        <div class="flex items-center justify-between mb-4">
-          <div class="flex-shrink-0">
-            <span class="text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">
+      <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex-shrink-0">
+            <span className="text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">
               $45,385
             </span>
-            <h3 class="text-base font-light text-gray-500 dark:text-gray-400">
+            <h3 className="text-base font-light text-gray-500 dark:text-gray-400">
               Sales this week
             </h3>
           </div>
-          <div class="flex items-center justify-end flex-1 text-base font-medium text-green-500 dark:text-green-400">
+          <div className="flex items-center justify-end flex-1 text-base font-medium text-green-500 dark:text-green-400">
             12.5%
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
