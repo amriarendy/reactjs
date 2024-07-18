@@ -8,6 +8,6 @@ const GridVertical = ({ cols, children }) => {
       </div>
     </>
   );
-}
+};
 
 export default GridVertical;

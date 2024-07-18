@@ -1,9 +1,13 @@
 import React from "react";
+import PanelLayout from "../PanelLayout";
+import Breadcrumbs from "../../../components/breadcrumbs/Breadcrumbs";
 
 const AddBlog = () => {
   return (
     <>
-    <div>Add Blog</div>
+      <PanelLayout>
+        <Breadcrumbs />
+      </PanelLayout>
     </>
   );
 };
