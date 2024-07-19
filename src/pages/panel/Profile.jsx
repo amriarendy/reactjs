@@ -2,10 +2,15 @@ import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import PanelLayout from "./PanelLayout";
 
 const Profile = () => {
+  const breadCrumbs = {
+    page: 'Profile',
+    data: [
+    { page: 'Profile', route: '/profile' }
+  ]}
   return (
     <>
       <PanelLayout>
-        <Breadcrumbs />
+        <Breadcrumbs breadCrumbs={breadCrumbs} />
         <div className="grid bg-white grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
           {/* Profile */}
           <div className="col-span-full xl:col-auto">

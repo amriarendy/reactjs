@@ -4,11 +4,11 @@ import { Input, InputFile, InputSearch } from "../ui/Input";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
 
-const AttributeTable = ({ route }) => {
+const AttributeTable = ({ route, attribute }) => {
   return (
     <>
       <div className="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 bg-white dark:bg-gray-900">
-        <div>
+        {attribute.add && (
           <Link to={route}>
             <Button
               id="dropdownActionButton"
@@ -18,10 +18,12 @@ const AttributeTable = ({ route }) => {
               icon={<FaPlus className="w-5 h-5 mr-3 -ml-1" />}
             />
           </Link>
-        </div>
+        )}
+        {attribute.search && (
         <div className="relative">
           <InputSearch />
         </div>
+        )}
       </div>
     </>
   );

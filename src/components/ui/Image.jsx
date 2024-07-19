@@ -1,7 +1,7 @@
-export function Image({ id, src, alt, imageClass, path }) {
+export function Image({ id, src, alt, className, path }) {
   return (
     <>
-      <img id={id} className={imageClass} src={src} alt={alt} />
+      <img id={id} src={src} alt={alt} className={className} />
     </>
   );
 }

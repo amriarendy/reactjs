@@ -3,19 +3,23 @@ import Button from "../ui/Button";
 import { FaRegTrashAlt, FaEdit } from "react-icons/fa";
 import CheckBox from "../ui/CheckBox";
 
-const TableBody = () => {
+const TableBody = ({attribute}) => {
   return (
     <>
       <tbody className="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
         <tr className="hover:bg-gray-100 dark:hover:bg-gray-700">
+          {attribute.checkbox && (
           <td className="w-4 p-4">
             <div className="flex items-center">
               <CheckBox item={{ id: "checkbox-1" }} />
             </div>
           </td>
+          )}
+          {attribute.checkbox && (
           <td className="w-4 p-4">
             <div className="flex items-center">1.</div>
           </td>
+          )}
           <td className="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap">
             <img
               className="w-10 h-10 rounded-full"
@@ -44,6 +48,7 @@ const TableBody = () => {
             <div className="flex items-center"></div>
           </td>
           <td className="p-4 space-x-2 whitespace-nowrap">
+            {attribute.checkbox && (
             <Button
               id={"btnEdit"}
               type={"button"}
@@ -51,6 +56,8 @@ const TableBody = () => {
               color={"blue"}
               icon={<FaEdit className="w-5 h-5 mr-2 -ml-1" />}
             />
+            )}
+            {attribute.checkbox && (
             <Button
               id={"btnDestroy"}
               type={"button"}
@@ -58,6 +65,7 @@ const TableBody = () => {
               color={"red"}
               icon={<FaRegTrashAlt className="w-5 h-5 mr-2 -ml-1" />}
             />
+            )}
           </td>
         </tr>
       </tbody>
