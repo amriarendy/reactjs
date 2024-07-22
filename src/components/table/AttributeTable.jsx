@@ -1,24 +1,30 @@
 import React from "react";
-import { FaFileDownload, FaPlus } from "react-icons/fa";
-import { Input, InputFile, InputSearch } from "../ui/Input";
+import { FaPlus } from "react-icons/fa";
+import { InputSearch } from "../ui/Input";
 import Button from "../ui/Button";
-import { Link } from "react-router-dom";
+import Href from "../ui/Href";
 
-const AttributeTable = ({ attribute }) => {
+const AttributeTable = ({ attribute, toggleModal }) => {
   return (
     <>
       <div className="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 bg-white dark:bg-gray-900">
-        {attribute.add && (
-          <Link to={attribute.add.route}>
+        {attribute.add &&
+          (attribute.add.route == "toggleModal" ? (
             <Button
-              id="dropdownActionButton"
               type="button"
+              label="Add"
+              color="blue"
+              onClick={toggleModal}
+              icon={<FaPlus className="w-5 h-5 mr-3 -ml-1" />}
+            />
+          ) : (
+            <Href
+              route={attribute.add.route}
               label="Add"
               color="blue"
               icon={<FaPlus className="w-5 h-5 mr-3 -ml-1" />}
             />
-          </Link>
-        )}
+          ))}
         {attribute.search && (
           <div className="relative">
             <InputSearch />

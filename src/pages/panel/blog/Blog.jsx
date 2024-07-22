@@ -20,11 +20,7 @@ const Blog = () => {
         <Breadcrumbs breadCrumbs={breadCrumbs} />
         <div className="col-span-3">
           <Card
-            header={
-              <AttributeTable
-                attribute={BLOG_FORMAT_TABLE.attribute}
-              />
-            }
+            header={<AttributeTable attribute={BLOG_FORMAT_TABLE.attribute} />}
             cols={1}
           >
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">

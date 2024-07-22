@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { SIDEBAR_MENU_ITEMS } from "../../libs/constants/navigations";
 import MenuList from "../menu/MenuList";
-import { FaGithub, FaBookmark, FaCog, FaGlobeAsia } from "react-icons/fa";
 import MenuBottom from "../menu/MenuBottom";
 
 const Sidebar = () => {

@@ -2,10 +2,8 @@ import React from "react";
 import Button from "../ui/Button";
 import { FaRegTrashAlt, FaEdit } from "react-icons/fa";
 import CheckBox from "../ui/CheckBox";
-import { Link } from "react-router-dom";
 
-const TableBody = ({ attribute }) => {
-  console.log('Tbody: ', attribute.edit.route);
+const TableBody = ({ attribute, toggleModal }) => {
   return (
     <>
       <tbody className="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
@@ -50,28 +48,40 @@ const TableBody = ({ attribute }) => {
             <div className="flex items-center"></div>
           </td>
           <td className="p-4 space-x-2 whitespace-nowrap">
-            {attribute.edit && (
-              <Link to={attribute.edit.route}>
+            {attribute.edit &&
+              (attribute.edit.route == "toggleModal" ? (
                 <Button
-                  id={"btnEdit"}
-                  type={"button"}
-                  label={"Edit"}
-                  color={"blue"}
+                  type="button"
+                  label="Edit"
+                  color="blue"
+                  onClick={toggleModal}
                   icon={<FaEdit className="w-5 h-5 mr-2 -ml-1" />}
                 />
-              </Link>
-            )}
-            {attribute.delete && (
-              <Link to={attribute.delete.route}>
+              ) : (
+                <Href
+                  route={attribute.edit.route}
+                  label="Edit"
+                  color="blue"
+                  icon={<FaEdit className="w-5 h-5 mr-2 -ml-1" />}
+                />
+              ))}
+            {attribute.delete &&
+              (attribute.delete.route == "toggleModal" ? (
                 <Button
-                  id={"btnDestroy"}
-                  type={"button"}
-                  label={"Delete"}
-                  color={"red"}
+                  type="button"
+                  label="Delete"
+                  color="red"
+                  onClick={toggleModal}
                   icon={<FaRegTrashAlt className="w-5 h-5 mr-2 -ml-1" />}
                 />
-              </Link>
-            )}
+              ) : (
+                <Href
+                  route={attribute.delete.route}
+                  label="Delete"
+                  color="red"
+                  icon={<FaRegTrashAlt className="w-5 h-5 mr-2 -ml-1" />}
+                />
+              ))}
           </td>
         </tr>
       </tbody>

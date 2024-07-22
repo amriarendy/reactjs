@@ -1,11 +1,7 @@
 import React from "react";
 
 const Hashtag = () => {
-  return (
-      <>
-        
-      </>
-    );
+  return <></>;
 };
 
 export default Hashtag;
