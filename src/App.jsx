@@ -9,6 +9,7 @@ import EditBlog from "./pages/panel/blog/EditBlog";
 import User from "./pages/panel/user/User";
 import Test from "./pages/panel/Test";
 import Category from "./pages/panel/master/Category";
+import Hashtag from "./pages/panel/master/Hashtag";
 
 function App() {
   return (
@@ -16,10 +17,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/add" element={<AddBlog />} />
           <Route path="/blog/edit" element={<EditBlog />} />
           <Route path="/master/category" element={<Category />} />
+          <Route path="/master/hashtag" element={<Hashtag />} />
           <Route path="/user" element={<User />} />
           <Route path="/setting" element={<Setting />} />
           <Route path="/blank" element={<Blank />} />

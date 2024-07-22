@@ -23,7 +23,6 @@ const Blog = () => {
             header={
               <AttributeTable
                 attribute={BLOG_FORMAT_TABLE.attribute}
-                route={"/blog/add"}
               />
             }
             cols={1}

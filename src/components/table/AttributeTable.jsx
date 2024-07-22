@@ -4,12 +4,12 @@ import { Input, InputFile, InputSearch } from "../ui/Input";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
 
-const AttributeTable = ({ route, attribute }) => {
+const AttributeTable = ({ attribute }) => {
   return (
     <>
       <div className="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 bg-white dark:bg-gray-900">
         {attribute.add && (
-          <Link to={route}>
+          <Link to={attribute.add.route}>
             <Button
               id="dropdownActionButton"
               type="button"

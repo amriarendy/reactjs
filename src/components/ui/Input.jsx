@@ -19,6 +19,7 @@ export function Input({
         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >
         {label}
+        {required ? <span className="text-red-600"> *</span> : null}
       </label>
       <input
         type={type}
@@ -51,6 +52,7 @@ export function InputFile({
         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >
         {label}
+        {required ? <span className="text-red-600"> *</span> : null}
       </label>
       <input
         type="file"

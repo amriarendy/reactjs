@@ -8,6 +8,7 @@ const TextArea = ({ id, label, name, rows, placeholder, required }) => {
         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >
         {label}
+        {required ? <span className="text-red-600"> *</span> : null}
       </label>
       <textarea
         id={id}

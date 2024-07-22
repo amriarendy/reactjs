@@ -8,12 +8,22 @@ export const BLOG_FORMAT_TABLE = {
     { key: "action", label: "Action" },
   ],
   attribute: {
-    add: true,
-    edit: true,
-    delete: true,
-    search: true,
-    paginate: true,
     no: true,
     checkbox: true,
+    add: {
+      route: '/blog/add'
+    },
+    edit: {
+      route: '/blog/edit'
+    },
+    delete: {
+      route: '/blog/delete'
+    },
+    search: {
+      route: '/blog/search'
+    },
+    paginate: {
+      route: '/blog/pagination'
+    }
   },
 };

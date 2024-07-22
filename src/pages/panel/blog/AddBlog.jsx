@@ -3,8 +3,7 @@ import PanelLayout from "../PanelLayout";
 import Breadcrumbs from "../../../components/breadcrumbs/Breadcrumbs";
 import Card from "../../../components/card/Card";
 import Button from "../../../components/ui/Button";
-import { Image } from "../../../components/ui/Image";
-import { FaSave, FaRegTrashAlt } from "react-icons/fa";
+import { FaSave } from "react-icons/fa";
 import { Input, InputFile } from "../../../components/ui/Input";
 import Option from "../../../components/ui/Option";
 import TextArea from "../../../components/ui/TextArea";
@@ -50,6 +49,11 @@ const AddBlog = () => {
                 name={"category"}
                 label={"Category"}
                 required={true}
+                selected={[{ key: '', value: '', label: 'Choose Your Selected' },]}
+                data={[
+                  { key: 'business', value: 'business', label: 'Business' },
+                  { key: 'politic', value: 'politic', label: 'Politic' }
+                ]}
               />
             </div>
             <div className="col-span-6 sm:col-span-3">
@@ -58,11 +62,23 @@ const AddBlog = () => {
                 name={"tag"}
                 label={"Hashtag"}
                 required={true}
+                selected={[{ key: '', value: '', label: 'Choose Your Selected' },]}
+                data={[
+                  { key: 'business', value: 'business', label: 'Business' },
+                  { key: 'politic', value: 'politic', label: 'Politic' }
+                ]}
               />
             </div>
           </Card>
           <WYSIWYG />
-          <Card cols={6}>
+          <Card footer={
+              <Button
+                id={"btnSave"}
+                type={"button"}
+                label={"Save"}
+                color={"blue"}
+                icon={<FaSave className="w-5 h-5 mr-2 -ml-1" />}
+              />} cols={6}>
             <div className="col-span-6 sm:col-span-3">
               <InputFile
                 id={"thumbnail"}
