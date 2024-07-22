@@ -8,6 +8,7 @@ import AddBlog from "./pages/panel/blog/AddBlog";
 import EditBlog from "./pages/panel/blog/EditBlog";
 import User from "./pages/panel/user/User";
 import Test from "./pages/panel/Test";
+import Category from "./pages/panel/master/Category";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/add" element={<AddBlog />} />
           <Route path="/blog/edit" element={<EditBlog />} />
+          <Route path="/master/category" element={<Category />} />
           <Route path="/user" element={<User />} />
           <Route path="/setting" element={<Setting />} />
           <Route path="/blank" element={<Blank />} />

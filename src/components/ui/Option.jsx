@@ -1,6 +1,6 @@
 import React from "react";
 
-const Option = ({ id, label, name, required }) => {
+const Option = ({ id, label, name, required, data }) => {
   return (
     <>
       <div className="mb-4">

@@ -1,4 +1,4 @@
-import { RiPieChartFill } from "react-icons/ri";
+import { RiPieChartFill, RiLayout6Fill } from "react-icons/ri";
 import { ImNewspaper } from "react-icons/im";
 import { FaCogs, FaBorderNone, FaSignOutAlt, FaUser } from "react-icons/fa";
 
@@ -30,11 +30,28 @@ export const SIDEBAR_MENU_ITEMS = [
     ),
   },
   {
+    key: "master",
+    label: "Master",
+    route: "collapse",
+    subMenu: [
+      {
+        key: "category",
+        label: "Category",
+        route: "/master/category",
+      },
+      {
+        key: "hashtag",
+        label: "Hashtag",
+        route: "/master/hashtag",
+      },
+    ],
+  },
+  {
     key: "user",
     label: "Users",
     route: "/user",
     icon: (
-      <FaUser 
+      <FaUser
         className="w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
@@ -82,3 +99,5 @@ export const SIDEBAR_MENU_ITEMS = [
     ),
   },
 ];
+
+export const SIDEBAR_BOTTOM_MENU_ITEMS = {};

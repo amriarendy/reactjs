@@ -20,9 +20,9 @@ const AttributeTable = ({ route, attribute }) => {
           </Link>
         )}
         {attribute.search && (
-        <div className="relative">
-          <InputSearch />
-        </div>
+          <div className="relative">
+            <InputSearch />
+          </div>
         )}
       </div>
     </>

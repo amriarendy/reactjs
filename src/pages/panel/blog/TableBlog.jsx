@@ -1,13 +1,13 @@
 export const BLOG_FORMAT_TABLE = {
   th: [
-      { key: "name", label: "Name" },
-      { key: "bio", label: "Biography" },
-      { key: "position", label: "Position" },
-      { key: "country", label: "Country" },
-      { key: "status", label: "Status" },
-      { key: "action", label: "Action" },
+    { key: "title", label: "Title" },
+    { key: "description", label: "Description" },
+    { key: "category", label: "Category" },
+    { key: "views", label: "Views" },
+    { key: "publish", label: "Date Publish" },
+    { key: "action", label: "Action" },
   ],
-  attribute : {
+  attribute: {
     add: true,
     edit: true,
     delete: true,
@@ -15,5 +15,5 @@ export const BLOG_FORMAT_TABLE = {
     paginate: true,
     no: true,
     checkbox: true,
-  }
+  },
 };

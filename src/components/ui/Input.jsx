@@ -2,7 +2,16 @@ import React from "react";
 import { FaSearch, FaCodeBranch } from "react-icons/fa";
 import Button from "./Button";
 
-export function Input({ id, label, type, name, placeholder, required }) {
+export function Input({
+  id,
+  label,
+  type,
+  name,
+  placeholder,
+  required,
+  readonly,
+  disabled,
+}) {
   return (
     <>
       <label
@@ -18,12 +27,23 @@ export function Input({ id, label, type, name, placeholder, required }) {
         className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         placeholder={placeholder}
         {...(required ? { required: true } : {})}
+        {...(readonly ? { readonly: true } : {})}
+        {...(disabled ? { disabled: true } : {})}
       />
     </>
   );
 }
 
-export function InputFile({ id, label, name, placeholder, required, help }) {
+export function InputFile({
+  id,
+  label,
+  name,
+  placeholder,
+  required,
+  readonly,
+  disabled,
+  help,
+}) {
   return (
     <>
       <label
@@ -40,6 +60,8 @@ export function InputFile({ id, label, name, placeholder, required, help }) {
         aria-describedby={id}
         placeholder={placeholder}
         {...(required ? { required: true } : {})}
+        {...(readonly ? { readonly: true } : {})}
+        {...(disabled ? { disabled: true } : {})}
       />
       <p className="mt-1 text-sm text-gray-500 dark:text-gray-300" id={id}>
         {help}
@@ -48,7 +70,16 @@ export function InputFile({ id, label, name, placeholder, required, help }) {
   );
 }
 
-export function InputSearch({ id, label, name, placeholder, required, help }) {
+export function InputSearch({
+  id,
+  label,
+  name,
+  placeholder,
+  required,
+  readonly,
+  disabled,
+  help,
+}) {
   return (
     <>
       <div className="flex items-center max-w-sm mx-auto">

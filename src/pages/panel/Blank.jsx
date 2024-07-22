@@ -5,10 +5,9 @@ import Card from "../../components/card/Card";
 
 const Blank = () => {
   const breadCrumbs = {
-    page: 'Blank',
-    data: [
-    { page: 'Blank', route: '/blank' }
-  ]}
+    page: "Blank",
+    data: [{ page: "Blank", route: "/blank" }],
+  };
   return (
     <>
       <PanelLayout>

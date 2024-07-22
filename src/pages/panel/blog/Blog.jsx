@@ -8,19 +8,32 @@ import { BLOG_FORMAT_TABLE } from "./TableBlog";
 
 const Blog = () => {
   const breadCrumbs = {
-    page: 'Blog',
+    page: "Blog",
     data: [
-    { page: 'Blog', route: '/blog' },
-    { page: 'List', route: '/blog' }
-  ]}
+      { page: "Blog", route: "/blog" },
+      { page: "List", route: "/blog" },
+    ],
+  };
   return (
     <>
       <PanelLayout>
         <Breadcrumbs breadCrumbs={breadCrumbs} />
         <div className="col-span-3">
-          <Card header={<AttributeTable attribute={BLOG_FORMAT_TABLE.attribute} route={"/blog/add"} />} cols={1}>
+          <Card
+            header={
+              <AttributeTable
+                attribute={BLOG_FORMAT_TABLE.attribute}
+                route={"/blog/add"}
+              />
+            }
+            cols={1}
+          >
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-              <Table attribute={BLOG_FORMAT_TABLE.attribute} thead={BLOG_FORMAT_TABLE.th} tbody={BLOG_FORMAT_TABLE.attribute} />
+              <Table
+                attribute={BLOG_FORMAT_TABLE.attribute}
+                thead={BLOG_FORMAT_TABLE.th}
+                tbody={BLOG_FORMAT_TABLE.attribute}
+              />
             </div>
           </Card>
         </div>

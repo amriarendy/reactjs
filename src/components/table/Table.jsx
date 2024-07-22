@@ -19,9 +19,7 @@ const Table = ({ attribute, thead, tbody }) => {
         </div>
       </div>
       {/* paginate */}
-      {attribute.paginate && (
-        <Paginate />
-      )}
+      {attribute.paginate && <Paginate />}
     </>
   );
 };
