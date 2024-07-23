@@ -1002,5 +1002,45 @@
         "publishedAt": "2024-07-18T15:09:00Z",
         "content": "Dublin, July 18, 2024 (GLOBE NEWSWIRE) -- The \"Advanced Energy Storage - Global Strategic Business Report\" report has been added to ResearchAndMarkets.com's offering.\r\nThe global market for Advanced … [+6904 chars]"
         }
+    ],
+    "categories": [
+        {
+            "id": "esnfess1",
+            "category": "Bussiness",
+            "slug": "bussiness"
+        },
+        {
+            "id": "pfefcs2",
+            "category": "Politics",
+            "slug": "politics"
+        },
+        {
+            "id": "nfefsf3",
+            "category": "News",
+            "slug": "news"
+        },
+        {
+            "id": "tfesgy5",
+            "category": "Technology",
+            "slug": "technology"
+        }
+    ],
+    "tags": [
+        {
+            "id": "php1",
+            "category": "php"
+        },
+        {
+            "id": "laravel2",
+            "category": "laravel"
+        },
+        {
+            "id": "nodejs3",
+            "category": "nodejs"
+        },
+        {
+            "id": "codeigniter4",
+            "category": "codeigniter"
+        }
     ]
 }

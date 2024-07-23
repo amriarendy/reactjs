@@ -3,7 +3,7 @@ import Paginate from "../pagination/Paginate";
 import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
 
-const Table = ({ attribute, thead, tbody, toggleModal }) => {
+const Table = ({ attribute, thead, tbody, tdata, toggleModal }) => {
   return (
     <>
       <div className="flex flex-col">
@@ -15,6 +15,7 @@ const Table = ({ attribute, thead, tbody, toggleModal }) => {
                 <TableBody
                   tbody={tbody}
                   attribute={attribute}
+                  tdata={tdata}
                   toggleModal={toggleModal}
                 />
               </table>

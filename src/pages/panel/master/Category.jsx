@@ -4,8 +4,9 @@ import Table from "../../../components/table/Table";
 import AttributeTable from "../../../components/table/AttributeTable";
 import Breadcrumbs from "../../../components/breadcrumbs/Breadcrumbs";
 import Card from "../../../components/card/Card";
-import { CATEGORY_FORMAT_TABLE } from "./CATEGORY_FORMAT_TABLE";
+import { CATEGORY_FORMAT_TABLE, ADD_CATEGORY_FORMAT_MODAL, EDIT_CATEGORY_FORMAT_MODAL } from "../../../libs/constants/formats/CategoryFormat";
 import Modal from "../../../components/modal/Modal";
+import DataTable from "../../../../dummy.json"
 
 const Category = () => {
   const breadCrumbs = {
@@ -15,10 +16,18 @@ const Category = () => {
       { page: "List", route: "/category" },
     ],
   };
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
+  
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  
+  const toggleAddModal = () => {
+    setIsAddModalOpen(!isAddModalOpen);
   };
+  
+  const toggleEditModal = () => {
+    setIsEditModalOpen(!isEditModalOpen);
+  };
+  
   return (
     <>
       <PanelLayout>
@@ -28,7 +37,7 @@ const Category = () => {
             header={
               <AttributeTable
                 attribute={CATEGORY_FORMAT_TABLE.attribute}
-                toggleModal={toggleModal}
+                toggleModal={toggleAddModal}
               />
             }
             cols={1}
@@ -38,14 +47,16 @@ const Category = () => {
                 attribute={CATEGORY_FORMAT_TABLE.attribute}
                 thead={CATEGORY_FORMAT_TABLE.th}
                 tbody={CATEGORY_FORMAT_TABLE.attribute}
-                toggleModal={toggleModal}
+                tdata={DataTable.categories}
+                toggleModal={toggleEditModal}
               />
             </div>
           </Card>
         </div>
 
         {/* Modal */}
-        {isModalOpen && <Modal toggleModal={toggleModal} />}
+        {isAddModalOpen && <Modal body={ADD_CATEGORY_FORMAT_MODAL} toggleModal={toggleAddModal} />}
+        {isEditModalOpen && <Modal body={EDIT_CATEGORY_FORMAT_MODAL} toggleModal={toggleEditModal} />}
       </PanelLayout>
     </>
   );

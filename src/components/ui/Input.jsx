@@ -14,6 +14,9 @@ export function Input({
 }) {
   return (
     <>
+      {type == "hidden" ? (
+        ""
+      ) : (
       <label
         htmlFor={id}
         className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -21,6 +24,7 @@ export function Input({
         {label}
         {required ? <span className="text-red-600"> *</span> : null}
       </label>
+      )}
       <input
         type={type}
         name={name}

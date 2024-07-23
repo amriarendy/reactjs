@@ -9,7 +9,7 @@ const AttributeTable = ({ attribute, toggleModal }) => {
     <>
       <div className="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 bg-white dark:bg-gray-900">
         {attribute.add &&
-          (attribute.add.route == "toggleModal" ? (
+          (attribute.add.route === "toggleAddModal" ? (
             <Button
               type="button"
               label="Add"

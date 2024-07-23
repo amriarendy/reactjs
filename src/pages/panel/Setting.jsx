@@ -1,5 +1,4 @@
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
-import { FaSave, FaRegTrashAlt } from "react-icons/fa";
 import Button from "../../components/ui/Button";
 import { Input } from "../../components/ui/Input";
 import Option from "../../components/ui/Option";
@@ -8,7 +7,7 @@ import PanelLayout from "./PanelLayout";
 import Radio from "../../components/ui/Radio";
 import { Image } from "../../components/ui/Image";
 import Card from "../../components/card/Card";
-import { FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaGithub, FaSave, FaRegTrashAlt } from "react-icons/fa";
 
 const Setting = () => {
   const breadCrumbs = {

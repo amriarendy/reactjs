@@ -4,7 +4,8 @@ import Table from "../../../components/table/Table";
 import AttributeTable from "../../../components/table/AttributeTable";
 import Breadcrumbs from "../../../components/breadcrumbs/Breadcrumbs";
 import Card from "../../../components/card/Card";
-import { BLOG_FORMAT_TABLE } from "./TableBlog";
+import { BLOG_FORMAT_TABLE } from "../../../libs/constants/formats/BlogFormat";
+import DataTable from "../../../libs/constants/formats/BlogFormat"
 
 const Blog = () => {
   const breadCrumbs = {
