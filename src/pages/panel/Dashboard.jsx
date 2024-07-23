@@ -1,4 +1,3 @@
-import React from "react";
 import PanelLayout from "./PanelLayout";
 import Chart from "../../components/chart/Chart";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import PanelLayout from "../PanelLayout";
 import Breadcrumbs from "../../../components/breadcrumbs/Breadcrumbs";
 import Card from "../../../components/card/Card";
@@ -49,10 +48,12 @@ const AddBlog = () => {
                 name={"category"}
                 label={"Category"}
                 required={true}
-                selected={[{ key: '', value: '', label: 'Choose Your Selected' },]}
+                selected={[
+                  { key: "", value: "", label: "Choose Your Selected" },
+                ]}
                 data={[
-                  { key: 'business', value: 'business', label: 'Business' },
-                  { key: 'politic', value: 'politic', label: 'Politic' }
+                  { key: "business", value: "business", label: "Business" },
+                  { key: "politic", value: "politic", label: "Politic" },
                 ]}
               />
             </div>
@@ -62,23 +63,29 @@ const AddBlog = () => {
                 name={"tag"}
                 label={"Hashtag"}
                 required={true}
-                selected={[{ key: '', value: '', label: 'Choose Your Selected' },]}
+                selected={[
+                  { key: "", value: "", label: "Choose Your Selected" },
+                ]}
                 data={[
-                  { key: 'business', value: 'business', label: 'Business' },
-                  { key: 'politic', value: 'politic', label: 'Politic' }
+                  { key: "business", value: "business", label: "Business" },
+                  { key: "politic", value: "politic", label: "Politic" },
                 ]}
               />
             </div>
           </Card>
           <WYSIWYG />
-          <Card footer={
+          <Card
+            footer={
               <Button
                 id={"btnSave"}
                 type={"button"}
                 label={"Save"}
                 color={"blue"}
                 icon={<FaSave className="w-5 h-5 mr-2 -ml-1" />}
-              />} cols={6}>
+              />
+            }
+            cols={6}
+          >
             <div className="col-span-6 sm:col-span-3">
               <InputFile
                 id={"thumbnail"}

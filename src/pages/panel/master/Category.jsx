@@ -4,9 +4,15 @@ import Table from "../../../components/table/Table";
 import AttributeTable from "../../../components/table/AttributeTable";
 import Breadcrumbs from "../../../components/breadcrumbs/Breadcrumbs";
 import Card from "../../../components/card/Card";
-import { CATEGORY_FORMAT_TABLE, ADD_CATEGORY_FORMAT_MODAL, EDIT_CATEGORY_FORMAT_MODAL } from "../../../libs/constants/formats/CategoryFormat";
+import {
+  CATEGORY_FORMAT_TABLE,
+  ADD_CATEGORY_FORMAT_MODAL,
+  EDIT_CATEGORY_FORMAT_MODAL,
+} from "../../../libs/constants/formats/CategoryFormat";
 import Modal from "../../../components/modal/Modal";
-import DataTable from "../../../../dummy.json"
+import DataTable from "../../../../dummy.json";
+import TableFeature from "../../../components/table/TableFeature";
+import TableAction from "../../../components/table/TableAction";
 
 const Category = () => {
   const breadCrumbs = {
@@ -16,18 +22,18 @@ const Category = () => {
       { page: "List", route: "/category" },
     ],
   };
-  
+
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  
+
   const toggleAddModal = () => {
     setIsAddModalOpen(!isAddModalOpen);
   };
-  
+
   const toggleEditModal = () => {
     setIsEditModalOpen(!isEditModalOpen);
   };
-  
+
   return (
     <>
       <PanelLayout>
@@ -47,16 +53,44 @@ const Category = () => {
                 attribute={CATEGORY_FORMAT_TABLE.attribute}
                 thead={CATEGORY_FORMAT_TABLE.th}
                 tbody={CATEGORY_FORMAT_TABLE.attribute}
-                tdata={DataTable.categories}
                 toggleModal={toggleEditModal}
-              />
+              >
+                {DataTable.categories.map((item) => (
+                  <tr
+                    className="hover:bg-gray-100 dark:hover:bg-gray-700"
+                    key={item.id}
+                  >
+                    <TableFeature attribute={CATEGORY_FORMAT_TABLE.attribute} />
+                    <td className="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
+                      {item.category}
+                    </td>
+                    <td className="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
+                      {item.slug}
+                    </td>
+                    <TableAction
+                      attribute={CATEGORY_FORMAT_TABLE.attribute}
+                      toggleModal={toggleEditModal}
+                    />
+                  </tr>
+                ))}
+              </Table>
             </div>
           </Card>
         </div>
 
         {/* Modal */}
-        {isAddModalOpen && <Modal body={ADD_CATEGORY_FORMAT_MODAL} toggleModal={toggleAddModal} />}
-        {isEditModalOpen && <Modal body={EDIT_CATEGORY_FORMAT_MODAL} toggleModal={toggleEditModal} />}
+        {isAddModalOpen && (
+          <Modal
+            body={ADD_CATEGORY_FORMAT_MODAL}
+            toggleModal={toggleAddModal}
+          />
+        )}
+        {isEditModalOpen && (
+          <Modal
+            body={EDIT_CATEGORY_FORMAT_MODAL}
+            toggleModal={toggleEditModal}
+          />
+        )}
       </PanelLayout>
     </>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { InputSearch } from "../ui/Input";
 import Button from "../ui/Button";

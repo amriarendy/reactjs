@@ -1,6 +1,4 @@
-import React from "react";
 import { FaSearch, FaCodeBranch } from "react-icons/fa";
-import Button from "./Button";
 
 export function Input({
   id,
@@ -17,13 +15,13 @@ export function Input({
       {type == "hidden" ? (
         ""
       ) : (
-      <label
-        htmlFor={id}
-        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >
-        {label}
-        {required ? <span className="text-red-600"> *</span> : null}
-      </label>
+        <label
+          htmlFor={id}
+          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          {label}
+          {required ? <span className="text-red-600"> *</span> : null}
+        </label>
       )}
       <input
         type={type}

@@ -1,4 +1,3 @@
-import React from "react";
 import ApexCharts from "apexcharts";
 import { HiArrowNarrowUp } from "react-icons/hi";
 

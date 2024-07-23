@@ -1,4 +1,3 @@
-import React from "react";
 import { IoMdClose } from "react-icons/io";
 
 const Modal = ({ body, toggleModal }) => {
@@ -46,7 +45,7 @@ const Modal = ({ body, toggleModal }) => {
                 ))}
               </div>
             </div>
-            
+
             {body.footer && (
               <div className="items-center p-6 border-t border-gray-200 rounded-b dark:border-gray-700">
                 {body.footer}

@@ -1,4 +1,3 @@
-import React from "react";
 import { SIDEBAR_MENU_ITEMS } from "../../libs/constants/navigations";
 import MenuList from "../menu/MenuList";
 import MenuBottom from "../menu/MenuBottom";

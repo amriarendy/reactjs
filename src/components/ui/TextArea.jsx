@@ -1,5 +1,3 @@
-import React from "react";
-
 const TextArea = ({ id, label, name, rows, placeholder, required }) => {
   return (
     <>

@@ -1,7 +1,4 @@
-import React from "react";
-
 const Option = ({ id, label, name, required, data, selected }) => {
-  // console.log('oprion: ', data[0]);
   return (
     <>
       <div className="mb-4">
@@ -22,11 +19,11 @@ const Option = ({ id, label, name, required, data, selected }) => {
             <option key={selected[0].key} value={selected[0].value}>
               {selected[0].label}
             </option>
-          ) : (
-            null
-          )}
+          ) : null}
           {data.map((item) => (
-            <option key={item.key} value={item.value}>{item.label}</option>
+            <option key={item.key} value={item.value}>
+              {item.label}
+            </option>
           ))}
         </select>
       </div>

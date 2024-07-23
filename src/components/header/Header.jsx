@@ -1,5 +1,3 @@
-import React from "react";
-import { IoIosNotifications } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import Notification from "./Notification";

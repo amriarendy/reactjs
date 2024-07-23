@@ -31,46 +31,61 @@ export const CATEGORY_FORMAT_TABLE = {
 
 export const ADD_CATEGORY_FORMAT_MODAL = {
   header: "Add Category",
-  footer: <Button id={"save"} type={"button"} label={"Save"} color={"blue"} icon={<FaSave className="w-5 h-5 mr-2 -ml-1" />}
-/>,
+  footer: (
+    <Button
+      id={"save"}
+      type={"button"}
+      label={"Save"}
+      color={"blue"}
+      icon={<FaSave className="w-5 h-5 mr-2 -ml-1" />}
+    />
+  ),
   content: {
     grid: 6,
     elements: [
-    {
-      key: "category",
-      label: "Category",
-      attribute: (
-        <Input
-          id={"category"}
-          name={"category"}
-          type={"text"}
-          label={"Category"}
-          required={true}
-        />
-      ),
-      col: 'col-span-6'
-    },
-    {
-      key: "slug",
-      label: "slug",
-      attribute: (
-        <Input
-          id={"slug"}
-          name={"slug"}
-          type={"text"}
-          label={"Slug"}
-          required={true}
-        />
-      ),
-      col: 'col-span-6'
-    },
-  ],}
+      {
+        key: "category",
+        label: "Category",
+        attribute: (
+          <Input
+            id={"category"}
+            name={"category"}
+            type={"text"}
+            label={"Category"}
+            required={true}
+          />
+        ),
+        col: "col-span-6",
+      },
+      {
+        key: "slug",
+        label: "slug",
+        attribute: (
+          <Input
+            id={"slug"}
+            name={"slug"}
+            type={"text"}
+            label={"Slug"}
+            required={true}
+          />
+        ),
+        col: "col-span-6",
+      },
+    ],
+  },
 };
 
 export const EDIT_CATEGORY_FORMAT_MODAL = {
   header: "Edit Category",
-  footer: <Button id={"save"} type={"button"} label={"Save"} color={"blue"} icon={<FaSave className="w-5 h-5 mr-2 -ml-1" />}
-/>,
+  footer: (
+    <Button
+      id={"save"}
+      type={"button"}
+      label={"Save"}
+      color={"blue"}
+      icon={<FaSave className="w-5 h-5 mr-2 -ml-1" />}
+    />
+  ),
   content: {
     grid: 6,
     elements: [
@@ -86,35 +101,36 @@ export const EDIT_CATEGORY_FORMAT_MODAL = {
             required={true}
           />
         ),
-        col: 'col-span-6'
+        col: "col-span-6",
       },
-    {
-      key: "category",
-      label: "Category",
-      attribute: (
-        <Input
-          id={"category"}
-          name={"category"}
-          type={"text"}
-          label={"Category"}
-          required={true}
-        />
-      ),
-      col: 'col-span-6'
-    },
-    {
-      key: "slug",
-      label: "slug",
-      attribute: (
-        <Input
-          id={"slug"}
-          name={"slug"}
-          type={"text"}
-          label={"Slug"}
-          required={true}
-        />
-      ),
-      col: 'col-span-6'
-    },
-  ],}
+      {
+        key: "category",
+        label: "Category",
+        attribute: (
+          <Input
+            id={"category"}
+            name={"category"}
+            type={"text"}
+            label={"Category"}
+            required={true}
+          />
+        ),
+        col: "col-span-6",
+      },
+      {
+        key: "slug",
+        label: "slug",
+        attribute: (
+          <Input
+            id={"slug"}
+            name={"slug"}
+            type={"text"}
+            label={"Slug"}
+            required={true}
+          />
+        ),
+        col: "col-span-6",
+      },
+    ],
+  },
 };

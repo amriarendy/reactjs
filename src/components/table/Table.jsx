@@ -1,9 +1,7 @@
-import React from "react";
 import Paginate from "../pagination/Paginate";
 import TableHeader from "./TableHeader";
-import TableBody from "./TableBody";
 
-const Table = ({ attribute, thead, tbody, tdata, toggleModal }) => {
+const Table = ({ children, attribute, thead }) => {
   return (
     <>
       <div className="flex flex-col">
@@ -12,12 +10,9 @@ const Table = ({ attribute, thead, tbody, tdata, toggleModal }) => {
             <div className="overflow-hidden shadow">
               <table className="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-600">
                 <TableHeader thead={thead} attribute={attribute} />
-                <TableBody
-                  tbody={tbody}
-                  attribute={attribute}
-                  tdata={tdata}
-                  toggleModal={toggleModal}
-                />
+                <tbody className="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
+                  {children}
+                </tbody>
               </table>
             </div>
           </div>

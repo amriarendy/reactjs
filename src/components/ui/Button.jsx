@@ -1,5 +1,3 @@
-import React from "react";
-
 const Button = ({ id, type, label, icon, color, onClick }) => {
   return (
     <>

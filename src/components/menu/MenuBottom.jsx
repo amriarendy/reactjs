@@ -1,5 +1,4 @@
-import React from "react";
-import { FaGithub, FaBookmark, FaCog, FaGlobeAsia } from "react-icons/fa";
+import { FaBookmark, FaCog, FaGlobeAsia } from "react-icons/fa";
 
 const MenuBottom = () => {
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import CheckBox from "../ui/CheckBox";
 
 const TableHeader = ({ attribute, thead }) => {
