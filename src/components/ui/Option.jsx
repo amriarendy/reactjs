@@ -20,8 +20,8 @@ const Option = ({ id, label, name, required, data, selected }) => {
               {selected[0].label}
             </option>
           ) : null}
-          {data.map((item) => (
-            <option key={item.key} value={item.value}>
+          {data.map((item, index) => (
+            <option key={item.key ? item.key : index} value={item.value}>
               {item.label}
             </option>
           ))}

@@ -7,7 +7,13 @@ import PanelLayout from "./PanelLayout";
 import Radio from "../../components/ui/Radio";
 import { Image } from "../../components/ui/Image";
 import Card from "../../components/card/Card";
-import { FaFacebookF, FaTwitter, FaGithub, FaSave, FaRegTrashAlt } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaGithub,
+  FaSave,
+  FaRegTrashAlt,
+} from "react-icons/fa";
 
 const Setting = () => {
   const breadCrumbs = {
@@ -210,6 +216,16 @@ const Setting = () => {
                 name={"robots"}
                 label={"Robots"}
                 required={true}
+                selected={[
+                  { key: "", value: "", label: "Choose Your Selected" },
+                ]}
+                data={[
+                  { value: "index, follow", label: "index, follow" },
+                  { value: "follow", label: "follow" },
+                  { value: "noindex, follow", label: "noindex, follow" },
+                  { value: "index, nofollow", label: "index, nofollow" },
+                  { value: "noindex, nofollow", label: "noindex, nofollow" },
+                ]}
               />
             </div>
             <div className="col-span-6 sm:col-span-3">
@@ -218,6 +234,16 @@ const Setting = () => {
                 name={"googlebot"}
                 label={"Google Bot"}
                 required={true}
+                selected={[
+                  { key: "", value: "", label: "Choose Your Selected" },
+                ]}
+                data={[
+                  { value: "index, follow", label: "index, follow" },
+                  { value: "follow", label: "follow" },
+                  { value: "noindex, follow", label: "noindex, follow" },
+                  { value: "index, nofollow", label: "index, nofollow" },
+                  { value: "noindex, nofollow", label: "noindex, nofollow" },
+                ]}
               />
             </div>
             <div className="col-span-6 sm:col-span-3">
@@ -226,6 +252,16 @@ const Setting = () => {
                 name={"googlebotnews"}
                 label={"Google Bot News"}
                 required={true}
+                selected={[
+                  { key: "", value: "", label: "Choose Your Selected" },
+                ]}
+                data={[
+                  { value: "index, follow", label: "index, follow" },
+                  { value: "follow", label: "follow" },
+                  { value: "noindex, follow", label: "noindex, follow" },
+                  { value: "index, nofollow", label: "index, nofollow" },
+                  { value: "noindex, nofollow", label: "noindex, nofollow" },
+                ]}
               />
             </div>
           </Card>

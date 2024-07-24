@@ -1,6 +1,6 @@
 import Button from "../ui/Button";
 import { FaRegTrashAlt, FaEdit } from "react-icons/fa";
-import Href from "../ui/Href";
+import { Href } from "../ui/Href";
 
 const TableAction = ({ attribute, toggleModal }) => {
   return (

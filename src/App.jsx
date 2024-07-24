@@ -10,12 +10,20 @@ import User from "./pages/panel/user/User";
 import Test from "./pages/panel/Test";
 import Category from "./pages/panel/master/Category";
 import Hashtag from "./pages/panel/master/Hashtag";
+import AddUser from "./pages/panel/user/AddUser";
+import EditUser from "./pages/panel/user/EditUser";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import ResetPassword from "./pages/auth/ResetPassword";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/blog" element={<Blog />} />
@@ -24,6 +32,8 @@ function App() {
           <Route path="/master/category" element={<Category />} />
           <Route path="/master/hashtag" element={<Hashtag />} />
           <Route path="/user" element={<User />} />
+          <Route path="/user/add" element={<AddUser />} />
+          <Route path="/user/edit" element={<EditUser />} />
           <Route path="/setting" element={<Setting />} />
           <Route path="/blank" element={<Blank />} />
           <Route path="/test" element={<Test />} />
