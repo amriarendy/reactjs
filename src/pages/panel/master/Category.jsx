@@ -18,8 +18,8 @@ const Category = () => {
   const breadCrumbs = {
     page: "Category",
     data: [
-      { page: "Category", route: "/category" },
-      { page: "List", route: "/category" },
+      { page: "Category", route: "/master/category" },
+      { page: "List", route: "/master/category" },
     ],
   };
 
@@ -52,15 +52,14 @@ const Category = () => {
               <Table
                 attribute={CATEGORY_FORMAT_TABLE.attribute}
                 thead={CATEGORY_FORMAT_TABLE.th}
-                tbody={CATEGORY_FORMAT_TABLE.attribute}
                 toggleModal={toggleEditModal}
               >
-                {DataTable.categories.map((item) => (
+                {DataTable.categories.map((item, index) => (
                   <tr
                     className="hover:bg-gray-100 dark:hover:bg-gray-700"
                     key={item.id}
                   >
-                    <TableFeature attribute={CATEGORY_FORMAT_TABLE.attribute} />
+                    <TableFeature attribute={CATEGORY_FORMAT_TABLE.attribute} index={index}/>
                     <td className="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
                       {item.category}
                     </td>

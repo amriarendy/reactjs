@@ -47,6 +47,15 @@ const Blog = () => {
                     <td className="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
                       {item.description}
                     </td>
+                    <td className="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
+                      Bussiness
+                    </td>
+                    <td className="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
+                      432
+                    </td>
+                    <td className="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">
+                      {item.publishedAt}
+                    </td>
                     <TableAction attribute={BLOG_FORMAT_TABLE.attribute} />
                   </tr>
                 ))}

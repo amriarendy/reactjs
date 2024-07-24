@@ -1028,19 +1028,19 @@
     "tags": [
         {
             "id": "php1",
-            "category": "php"
+            "tag": "php"
         },
         {
             "id": "laravel2",
-            "category": "laravel"
+            "tag": "laravel"
         },
         {
             "id": "nodejs3",
-            "category": "nodejs"
+            "tag": "nodejs"
         },
         {
             "id": "codeigniter4",
-            "category": "codeigniter"
+            "tag": "codeigniter"
         }
     ]
 }
